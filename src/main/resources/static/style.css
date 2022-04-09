@@ -1,0 +1,427 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar{
+    width: 0.6rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #000;
+    border-radius: 3px;
+}
+
+html{
+    font-size: 62.5%; /* Fonte padrão 10px */
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background: linear-gradient(90deg, #0065cc, #5280db, #99a1ea, #afbdf8, #cec6fa);
+    background-size: 400% 400%;
+    animation: backgroundTransition 8s ease-in-out infinite;
+    font-family: "Poppins", sans-serif;
+}
+
+@keyframes backgroundTransition{
+    0%{
+        background-position: 0% 80%;
+    }
+
+    50%{
+        background-position: 80% 100%;
+    }
+
+    100%{
+        background-position: 0% 90%;
+    }
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 8rem;
+}
+
+header h1{
+    font-size: 2.5rem;
+    color: #fff;
+    line-height: 3rem;
+}
+
+header nav ul{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+header nav ul li a{
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 2rem;
+    position: relative;
+    transition: color .2s;
+}
+
+header nav ul li a.active{
+    color: #fff;
+}
+
+header nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -0.3rem;
+    transition: width .2s;
+}
+
+header nav ul li a:hover::after,
+header nav ul li a.active::after {
+    width: 100%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+main h2{
+    font-size: 2rem;
+    color: #fff;
+    line-height: 2.5rem;
+}
+
+main ul{
+    list-style-type: circle;
+    color: #fff;
+}
+
+main ul li p{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #fff;
+}
+
+main #btn{
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 1rem 3rem;
+    background-image: linear-gradient(120deg, #3a61f3, #d43afe);
+    border-radius: 1rem;
+    animation: gradient 10s linear infinite;
+    position: relative;
+}
+
+#btn::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: inherit;
+    z-index: -1;
+    top: 1.5rem;
+    left: 0;
+    filter: blur(3rem);
+    opacity: 0.9;
+}
+
+@keyframes gradient{
+    from{
+        filter: hue-rotate(0deg);
+    }
+
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Form do Cadastrar Lembrete e de atualizar */
+#form-register,
+#update-form{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+#form-register #title-register,
+#update-form #update-title{
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: 2.5rem;
+	color: #fff;
+}
+
+#form-register #register,
+#update-form #update{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	border: 1px solid #000;
+	border-radius: 1rem;
+	padding: 2rem;
+}
+
+#form-register #register input,
+#update-form #update input{
+	padding: 1rem 2rem;
+	border: 2px solid #000;
+	border-radius: .8rem;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+#form-register #register textarea{
+	padding: 1rem;
+	border: 2px solid #000;
+	border-radius: .8rem;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+#form-register #register input:focus,
+#update-form #update input:focus,
+#form-register #register textarea:focus{
+	border-color: #d43afe;
+}
+
+
+#update-form #update #update-btns{
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+#form-register #register .button,
+#update-form #update .update-btn{
+	color: #fff;
+    font-size: 1.6rem;
+    padding: 1rem 3rem;
+    background-image: linear-gradient(120deg, #3a61f3, #d43afe);
+    border-radius: 1rem;
+    animation: gradient 10s linear infinite;
+    position: relative;
+    cursor: pointer;
+}
+
+#update-form #update .update-btn:nth-child(2){
+	padding: .8rem 1rem;
+}
+
+#form-register #register .button::before,
+#update-form #update .update-btn::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: inherit;
+    z-index: -1;
+    top: 1.5rem;
+    left: 0;
+    filter: blur(3rem);
+    opacity: 0.9;
+}
+
+@keyframes gradient{
+    from{
+        filter: hue-rotate(0deg);
+    }
+
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Lembretes Cadastradas */
+#list-register{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+#list-register #list-title{
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: 2.5rem;
+	color: #fff;
+}
+
+table, th, td{
+	padding: .8rem;
+	border: 1px solid #000;
+	font-size: 1.4rem;
+	font-weight: 500;
+	text-align: center;
+}
+
+table .table-button{
+	color: #fff;
+    font-size: 1.6rem;
+    padding: 1rem;
+    background-image: linear-gradient(120deg, #3a61f3, #d43afe);
+    border-radius: 1rem;
+    animation: gradient 10s linear infinite;
+    position: relative;
+    cursor: pointer;
+}
+
+table .table-button::before{
+	content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: inherit;
+    z-index: -1;
+    top: 1.5rem;
+    left: 0;
+    filter: blur(3rem);
+    opacity: 0.9;
+}
+
+@keyframes gradient{
+    from{
+        filter: hue-rotate(0deg);
+    }
+
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 14rem;
+    margin-top: 2rem;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+}
+
+.text h3{
+    font-size: 2rem;
+    color: #fff;
+    line-height: 2.5rem;
+}
+
+.text p{
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 2rem;
+}
+
+.wrapper{
+    display: flex;
+}
+
+/* Circulo envolta do icone */
+.wrapper .icon{
+    position: relative;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 1.5rem;
+    margin: 1rem;
+    width: 5rem;
+    height: 5rem;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Texto do icone */
+.wrapper .popup{
+    position: absolute;
+    top: 0;
+    font-size: 1.4rem;
+    background-color: #fff;
+    color: #fff;
+    padding: .5rem .8rem;
+    border-radius: .5rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .popup::before{
+    position: absolute;
+    content: "";
+    height: .8rem;
+    width: .8rem;
+    background-color: #fff;
+    bottom: -.3rem;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .popup,
+.wrapper .github:hover .popup::before{
+    background-color: #333;
+    color: #fff;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .popup,
+.wrapper .linkedin:hover .popup::before{
+    background-color: #0e76a8;
+    color: #fff;
+}
+
+.wrapper .portfolio:hover,
+.wrapper .portfolio:hover .popup,
+.wrapper .portfolio:hover .popup::before{
+    background-color: #0088cc;
+    color: #fff;
+}
+
+.wrapper .icon:hover .popup{
+    top: -4.5rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .popup{
+    text-shadow: 0 -1 0 rgba(0, 0, 0, 0.1);
+}

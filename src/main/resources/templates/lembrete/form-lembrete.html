@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang=”pt-br” xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Lembretes - UC14</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://kit.fontawesome.com/6ced12f15b.js" crossorigin="anonymous"></script>
+	</head>
+	
+	<body>
+		<header>
+		    <h1>Lembretes</h1>
+		
+		    <nav>
+		        <ul>
+		            <li>
+		                <a href="/">Página Inicial</a>
+		            </li>
+		
+		            <li>
+		                <a href="/cadastrarLembrete">Cadastrar Lembrete</a>
+		            </li>
+		
+		            <li>
+		                <a href="/lembretes">Listas Cadastradas</a>
+		            </li>
+		        </ul>
+		    </nav>
+		</header>
+		
+		<main id="form-register">
+			<h1 id="title-register">Cadastrar Lembrete</h1>
+			
+			<form method="post" id="register">
+				<input type="text" name="titulo" id="titulo" placeholder="Titulo do lembrete">
+				<input type="text" name="anotacao1" id="anotacao1" placeholder="1ª anotação">
+				<input type="text" name="anotacao2" id="anotacao2" placeholder="2ª anotação">
+				<input type="text" name="anotacao3" id="anotacao3" placeholder="3ª anotação">
+				<input type="text" name="anotacao4" id="anotacao4" placeholder="4ª anotação">
+				<input type="text" name="anotacao5" id="anotacao5" placeholder="5ª anotação">
+				
+				<textarea id="observacao" name="observacao" rows="10" cols="30" placeholder="Observações"></textarea>
+				
+				<button class="button" type="submit">Cadastrar</button>
+			</form>
+		</main>
+		
+		<footer>
+		    <div class="text">
+		        <h3>PI UC14 - SENAI Suiço Brasileira Paulo Ernesto Tolle</h3>
+		        
+		        <p>&copy; Athilas Silva</p>
+		    </div>
+		
+		    <div class="wrapper">
+		        <div class="icon github">
+		            <div class="popup">Github</div>
+		
+		            <span>
+		                <i class="fa-solid fa-user"></i>
+		            </span>
+		        </div>
+		
+		        <div class="icon linkedin">
+		            <div class="popup">Linkedin</div>
+		
+		            <span>
+		                <i class="fa-solid fa-briefcase"></i>
+		            </span>
+		        </div>
+		
+		        <div class="icon portfolio">
+		            <div class="popup">Portfólio</div>
+		
+		            <span>
+		                <i class="fa-solid fa-laptop-code"></i>
+		            </span>
+		        </div>
+		    </div>
+		</footer>
+	</body>
+</html>
