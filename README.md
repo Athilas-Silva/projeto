@@ -8,6 +8,7 @@ CRUD de anotações, onde o usuário cria suas listas e cadastra suas anotaçõe
 - Java
 - [MVC](https://www.treinaweb.com.br/blog/o-que-e-mvc)
 - [Spring Boot](https://start.spring.io/)
+- [MySQL](https://www.mysql.com/)
 - HTML
 - CSS
 
